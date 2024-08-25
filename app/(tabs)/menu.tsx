@@ -392,6 +392,7 @@ export default function MenuScreen() {
         <Image
           style={{ width: "100%", height: 45 }}
           source={require("@/assets/images/brunch-me-hard-marquee.png")}
+          resizeMode="contain"
         />
       </View>
       <ScrollView

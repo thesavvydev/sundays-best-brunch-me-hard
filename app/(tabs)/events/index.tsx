@@ -1,3 +1,4 @@
+import EventInquiryButton from "@/components/EventInquiryButton";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import PrimaryButton from "@/components/PrimaryButton";
 import { useRouter } from "expo-router";
@@ -73,6 +74,9 @@ export default function EventsScreen() {
           <PrimaryButton onPress={() => router.push("/(tabs)/events/weddings")}>
             <Text className="uppercase font-bold text-white">Weddings</Text>
           </PrimaryButton>
+        </View>
+        <View>
+          <EventInquiryButton />
         </View>
       </View>
     </ParallaxScrollView>

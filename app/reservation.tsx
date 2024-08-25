@@ -40,7 +40,6 @@ export default function ReservationModal() {
         </Text>
 
         <View className="bg-zinc-100 border-4 border-zinc-300 p-4">
-          {" "}
           <Dropdown
             data={[
               { label: "1", value: "1" },

@@ -1,7 +1,7 @@
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import ReservationButton from "@/components/ReservationButton";
 import { Ionicons } from "@expo/vector-icons";
-import { Button, Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function AboutScreen() {
   return (

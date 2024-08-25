@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { GestureResponderEvent, Text, TouchableOpacity } from "react-native";
+import { GestureResponderEvent, TouchableOpacity } from "react-native";
 
 export default function PrimaryButton({
   children,

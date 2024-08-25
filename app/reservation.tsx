@@ -1,7 +1,6 @@
 import PrimaryButton from "@/components/PrimaryButton";
 import { Ionicons } from "@expo/vector-icons";
 import RNDateTimePicker from "@react-native-community/datetimepicker";
-import { Picker } from "@react-native-picker/picker";
 import { Link, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
@@ -21,17 +20,18 @@ export default function ReservationModal() {
           <Text className="text-zinc-300 italic"> - Required</Text>
         </Text>
 
-        <Dropdown
-          className="bg-zinc-100 border-4 border-zinc-300 p-4"
-          data={[
-            { label: "Sandy", value: "sandy" },
-            { label: "St George", value: "stgeorge" },
-          ]}
-          labelField="label"
-          valueField="value"
-          placeholder="Select a location"
-          onChange={console.log}
-        />
+        <View className="bg-zinc-100 border-4 border-zinc-300 p-4">
+          <Dropdown
+            data={[
+              { label: "Sandy", value: "sandy" },
+              { label: "St George", value: "stgeorge" },
+            ]}
+            labelField="label"
+            valueField="value"
+            placeholder="Select a location"
+            onChange={console.log}
+          />
+        </View>
       </View>
       <View className="space-y-2">
         <Text className="text-white font-bold text-base">
@@ -39,23 +39,25 @@ export default function ReservationModal() {
           <Text className="text-zinc-300 italic"> - Optional</Text>
         </Text>
 
-        <Dropdown
-          className="bg-zinc-100 border-4 border-zinc-300 p-4"
-          data={[
-            { label: "1", value: "1" },
-            { label: "2", value: "2" },
-            { label: "3", value: "3" },
-            { label: "4", value: "4" },
-            { label: "5", value: "5" },
-            { label: "6", value: "6" },
-            { label: "7", value: "7" },
-            { label: "8+", value: "8+" },
-          ]}
-          labelField="label"
-          valueField="value"
-          placeholder="Select a number of people"
-          onChange={console.log}
-        />
+        <View className="bg-zinc-100 border-4 border-zinc-300 p-4">
+          {" "}
+          <Dropdown
+            data={[
+              { label: "1", value: "1" },
+              { label: "2", value: "2" },
+              { label: "3", value: "3" },
+              { label: "4", value: "4" },
+              { label: "5", value: "5" },
+              { label: "6", value: "6" },
+              { label: "7", value: "7" },
+              { label: "8+", value: "8+" },
+            ]}
+            labelField="label"
+            valueField="value"
+            placeholder="Select a number of people"
+            onChange={console.log}
+          />
+        </View>
       </View>
       <View className="space-y-2">
         <Text className="text-white font-bold text-base">
@@ -75,7 +77,7 @@ export default function ReservationModal() {
         </View>
       </View>
       <View>
-        <PrimaryButton>
+        <PrimaryButton onPress={console.log}>
           <Text className="uppercase font-bold text-white text-center">
             Find a Table
           </Text>
